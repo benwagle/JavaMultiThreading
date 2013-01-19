@@ -1,0 +1,77 @@
+<html>
+<head>
+
+<title>Making usernames and passwords</title>
+
+</head>
+<body>
+
+<script>
+
+var user= new Array();
+var name,pass;
+var curr= 0;
+
+for(var i=0; i<5; i++)
+{
+user[i]= new Array(2);
+}
+
+
+function validate()
+{
+name=document.getElementById("username").value;
+pass=document.getElementById("password").value;
+
+for(var i=0; i<user.length; i++)
+  {
+	  if(user[0][i]==name && user[1][i]==pass)
+	  {
+	  document.getElementById("error").innerHTML="success!";
+	  document.getElementById("page").innerHTML="click to see the show!";
+	  location.assign("file:///Users/rocketshot6/Desktop/slideshow.html");
+	  return;
+	  }
+	}
+	document.getElementById("error").innerHTML="try again";
+	
+
+}
+
+function newUser()
+{
+nameN=document.getElementById("usernameN").value;
+for(var k=0; k<user.length; k++)
+	{
+		if(user[0][k]==nameN)
+		{
+		document.getElementById("error2").innerHTML="username already used";
+		document.getElementById("usernameN").value="";
+		document.getElementById("passwordN").value="";
+		return;
+		}
+	}
+	user[0][curr]= nameN;
+	user[1][curr]= document.getElementById("passwordN").value;
+	curr+=1;
+	document.getElementById("error2").innerHTML="account created!";
+	document.getElementById("usernameN").value="";
+	document.getElementById("passwordN").value="";
+}
+</script>
+
+
+Username:<input id="username"/>
+Password:<input id="password" type="password"/>
+<button type="button" onclick="validate()"> Login </button>
+<p id="error"></p><a id="page" href="slideshow.html"></a>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>New user?<p>
+Username:<input id="usernameN" value=""/>
+Password:<input id="passwordN" type="password" value=""/>
+<button type="button" onclick="newUser()"> Create </button>
+<p id="error2"></p>
+</body>
+</html>

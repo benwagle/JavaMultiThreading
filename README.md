@@ -1,6 +1,6 @@
-In the Desktop folder, usernames.html was the firt thing I wrote while learning javascript. I wanted to see if I could 
+In the Desktop folder, usernames.html was the first thing I wrote while learning Javascript. I wanted to see if I could 
 use an array to keep track of usernames and passwords. I did not try to save the array to a file after each run, but just 
-wanted to see what I could do with my initial lessons of javascript. 
+wanted to see what I could do with my initial lessons of Javascript. 
 
 
 
